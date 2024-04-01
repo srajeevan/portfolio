@@ -73,6 +73,24 @@ providing candid feedback and implementing best practices.
 - Implemented presentation layers in ASP.NET with MVC views, Partial Views, strongly-typed Views, Razor view engine, and HTML helpers,
 ensuring a seamless user experience.
 
+## Education
+Computer Science
+Lamar University • US, TX, Beaumont • 2016
+
+## Skills
+
+- Data Engineering : Analyze, Organize data, build data systems, data analysis, interpret trends and patterns, improving data quality, working
+with nested data unstructured data.
+- Database Management : SQL,PL SQL
+- ETL Technologies : Airflow
+- Data Modeling : Star Schema, Snowflake, ER Diagrams, UML Class Diagrams
+- Distributed Computing : Spark, Pyspark in Databricks
+- Cloud Computing : AWS services like S3, EC2, Athena, Redshift, Azure
+- Programming Languages : Python, Pyspark, Javascript
+- Containerization : Knowledge in Docker.
+- Version Control : Git and GitHub
+- Analytical Skills : Analytical and problem-solving skills, Looker, TIBCO Webfocus
+
 ## Projects
 
 ### AWS-Python_ETL_Pipeline_using_Airflow
