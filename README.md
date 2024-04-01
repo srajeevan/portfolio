@@ -101,7 +101,7 @@ This project demonstrates how to build and automate an ETL pipeline written in P
 - AWS S3
 - Apache Airflow
 
-## Architecture Diagram
+#### Architecture Diagram
 
 ![Architecture_Diagram](https://github.com/srajeevan/AWS-Python_ETL_Pipeline_using_Airflow/assets/16627503/45e4047a-2d7b-4134-9b9f-d2ef31dba318)
 
@@ -121,6 +121,6 @@ https://www.kaggle.com/datasets/datasnaek/youtube-new
 - AWS IAM
 - Amazon QuickSight
 
-## Architecture Diagram
+#### Architecture Diagram
 
 ![Architecture Diagram](https://github.com/srajeevan/Youtube-Data-Analysis---AWS/blob/main/Assets/architecture_diagram.jpeg)
