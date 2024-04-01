@@ -1,10 +1,8 @@
 # Data Analyst
 
-### Education
-
 ### Work Experience
 
-Big Data Analyst - Insight Global July 2022 - Present
+## Big Data Analyst @ Insight Global July 2022 - Present
 - Engineered and optimized data processing workflows using Pyspark and Python on the Databricks platform, achieving a 20% reduction in
 runtime and a 15% decrease in resource utilization.
 - Innovated in writing efficient code for data transformation and analysis, handling large volumes of data with Spark, and integrating Java and
@@ -27,3 +25,50 @@ dashboards while incorporating data visualization best practices.
 leveraging containerization technologies like Docker and orchestration tools like Kubernetes.
 - Optimized data storage and retrieval processes by leveraging AWS capabilities, handling data in various formats such as Parquet, JSON, and
 Delta, and utilizing AWS components like S3 and Athena.
+
+## BI Engineer @ Marchon Partners March 2020 - July 2022
+
+- Collaborated with a cross-functional team in an agile environment to develop and design advanced data visualizations, including interactive
+charts and comprehensive drill-down reports, using a blend of technologies such as Python, SQL, and Spark.
+- Optimized data processing workflows in AWS EMR, achieving a 30% reduction in job execution time and enhancing data retrieval efficiency
+for complex analytical queries.
+- Designed and implemented robust dashboards and portals featuring critical KPIs and visuals for the Data Analytics platform, utilizing
+Webfocus App Studio and custom reporting with FOCUS language.
+- Engineered and launched a new ETL pipeline using Python, which led to a 20% increase in data processing speed and a 15% decrease in error
+rates, significantly improving data quality and availability.
+- Performed comprehensive unit testing on all written or modified programs, ensuring adherence to specifications and maintaining high
+standards of software quality.
+- Managed and executed scheduled reports through ReportCaster, ensuring timely delivery of daily, weekly, and monthly insights into the
+Report Library.
+- Utilized JIRA for efficient bug tracking, issue tracking, and project management, contributing to a streamlined development process.
+- Leveraged AWS services, including EC2, S3, and Elastic Map Reduce (EMR), to build scalable and resilient data processing solutions.
+- Developed a star database schema in Postgres and interfaced with the database using the psycopg2 Python PostgreSQL adapter, enhancing
+the structure and accessibility of data storage.
+- Conducted remediation, testing, and resolution of issues during each Webfocus/environment upgrade, demonstrating adaptability and a
+commitment to continuous improvement.
+- Created summary tables with embedded logic to optimize report execution, meeting analytical requirements and facilitating insightful data
+analysis.
+- Worked with AWS EMR cluster to execute Spark jobs, performing data transformations such as sort, join, aggregations, and filter to process
+data from S3 into analytical tables.
+
+## SQL DBA/BI Developer @ Amtex Systems Inc March 2017 - February 2020
+- Engineered and optimized MS SQL server configurations, achieving a 20% improvement in performance through the refinement of stored
+procedures and indexing, thereby enhancing data processing efficiency for large datasets.
+- Developed and executed a robust Transactional Replication strategy to ensure seamless data movement to the failover SQL server,
+contributing to system resilience and data integrity.
+- Created and maintained database structures, including tables, stored procedures, views, and triggers, using SQL and integrated debugging
+practices to ensure system stability.
+- Optimized SQL Server Performance by redesigning query execution plans and indexing strategies, resulting in a 35% reduction in data
+retrieval times and significantly faster report generation.
+- Monitored production SQL databases and analyzed resource consumption using tools like SQL profiler and performance monitor, identifying
+and resolving performance bottlenecks.
+- Independently analyzed and troubleshoot SQL queries, refining execution plans and employing Python scripts for data manipulation tasks
+when necessary.
+- Built and monitored SQL server performance dashboards using the TICK stack framework and Grafana, providing real-time insights and
+enabling proactive system management.
+- Developed responsive Business Portals and BI dashboards with Webfocus Appstudio and InfoAssist+, improving Dashboard UI with HTML,
+CSS, JavaScript, jQuery, and external JavaScript plugins.
+- Supported and enhanced .NET web applications, utilizing C#, .Net Framework 4.5, MVC design patterns, and Entity Framework, while
+providing candid feedback and implementing best practices.
+- Implemented presentation layers in ASP.NET with MVC views, Partial Views, strongly-typed Views, Razor view engine, and HTML helpers,
+ensuring a seamless user experience.
