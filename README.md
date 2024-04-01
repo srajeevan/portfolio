@@ -1,8 +1,8 @@
 # Data Analyst
 
-### Work Experience
+## Work Experience
 
-## Big Data Analyst @ Insight Global - July 2022 - Present
+**Big Data Analyst @ Insight Global - July 2022 - Present**
 - Engineered and optimized data processing workflows using Pyspark and Python on the Databricks platform, achieving a 20% reduction in
 runtime and a 15% decrease in resource utilization.
 - Innovated in writing efficient code for data transformation and analysis, handling large volumes of data with Spark, and integrating Java and
@@ -26,8 +26,7 @@ leveraging containerization technologies like Docker and orchestration tools lik
 - Optimized data storage and retrieval processes by leveraging AWS capabilities, handling data in various formats such as Parquet, JSON, and
 Delta, and utilizing AWS components like S3 and Athena.
 
-## BI Engineer @ Marchon Partners - March 2020 - July 2022
-
+**BI Engineer @ Marchon Partners - March 2020 - July 2022**
 - Collaborated with a cross-functional team in an agile environment to develop and design advanced data visualizations, including interactive
 charts and comprehensive drill-down reports, using a blend of technologies such as Python, SQL, and Spark.
 - Optimized data processing workflows in AWS EMR, achieving a 30% reduction in job execution time and enhancing data retrieval efficiency
@@ -51,7 +50,7 @@ analysis.
 - Worked with AWS EMR cluster to execute Spark jobs, performing data transformations such as sort, join, aggregations, and filter to process
 data from S3 into analytical tables.
 
-## SQL DBA/BI Developer @ Amtex Systems Inc - March 2017 - February 2020
+**SQL DBA/BI Developer @ Amtex Systems Inc - March 2017 - February 2020**
 - Engineered and optimized MS SQL server configurations, achieving a 20% improvement in performance through the refinement of stored
 procedures and indexing, thereby enhancing data processing efficiency for large datasets.
 - Developed and executed a robust Transactional Replication strategy to ensure seamless data movement to the failover SQL server,
