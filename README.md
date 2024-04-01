@@ -72,3 +72,37 @@ CSS, JavaScript, jQuery, and external JavaScript plugins.
 providing candid feedback and implementing best practices.
 - Implemented presentation layers in ASP.NET with MVC views, Partial Views, strongly-typed Views, Razor view engine, and HTML helpers,
 ensuring a seamless user experience.
+
+## Projects
+
+### AWS-Python_ETL_Pipeline_using_Airflow
+
+This project demonstrates how to build and automate an ETL pipeline written in Python and schedule it using open source Apache Airflow orchestration tool on AWS EC2 instance.
+#### AWS Services Used
+- AWS EC2
+- AWS S3
+- Apache Airflow
+
+## Architecture Diagram
+
+![Architecture_Diagram](https://github.com/srajeevan/AWS-Python_ETL_Pipeline_using_Airflow/assets/16627503/45e4047a-2d7b-4134-9b9f-d2ef31dba318)
+
+
+### Youtube-Data-Analysis---AWS
+
+This project securely manage, streamline, and perform analysis on the structured and semi-structured YouTube videos data based on the video categories and the trending metrics.
+Used a Kaggle dataset which contains statistics (CSV files) on daily popular YouTube videos over the course of many months. There are up to 200 trending videos published every day for many locations. The data for each region is in its own file. The video title, channel title, publication time, tags, views, likes and dislikes, description, and comment count are among the items included in the data. A category_id field, which differs by area, is also included in the JSON file linked to the region.
+Here is the link to the dataset
+https://www.kaggle.com/datasets/datasnaek/youtube-new
+
+#### AWS Services used for this project:
+- Amazon S3
+- AWS Glue
+- AWS Lambda
+- AWS Athena
+- AWS IAM
+- Amazon QuickSight
+
+## Architecture Diagram
+
+![Architecture Diagram](https://github.com/srajeevan/Youtube-Data-Analysis---AWS/blob/main/Assets/architecture_diagram.jpeg)
