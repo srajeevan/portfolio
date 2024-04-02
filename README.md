@@ -112,6 +112,8 @@ Used a Kaggle dataset which contains statistics (CSV files) on daily popular You
 Here is the link to the dataset
 https://www.kaggle.com/datasets/datasnaek/youtube-new
 
+#### Architecture Diagram
+
 #### AWS Services used in this project
 - Amazon S3
 - AWS Glue
@@ -120,6 +122,3 @@ https://www.kaggle.com/datasets/datasnaek/youtube-new
 - AWS IAM
 - Amazon QuickSight
 
-#### Architecture Diagram
-
-![Architecture Diagram](https://github.com/srajeevan/portfolio/blob/main/Assets/architecture_diagram.png)
