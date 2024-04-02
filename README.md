@@ -121,3 +121,5 @@ https://www.kaggle.com/datasets/datasnaek/youtube-new
 - Amazon QuickSight
 
 #### Architecture Diagram
+
+![Architecture Diagram](https://github.com/srajeevan/Youtube-Data-Analysis-AWS/blob/main/Assets/architecture_diagram.png)
