@@ -113,7 +113,7 @@ Here is the link to the dataset
 https://www.kaggle.com/datasets/datasnaek/youtube-new
 
 #### Architecture Diagram
-![Diagram](https://github.com/srajeevan/portfolio/blob/main/Assets/architecture_diagram.png)
+![Architecture_Diagram](https://github.com/srajeevan/AWS-Python_ETL_Pipeline_using_Airflow/assets/16627503/45e4047a-2d7b-4134-9b9f-d2ef31dba318)
 
 #### AWS Services used in this project
 - Amazon S3
