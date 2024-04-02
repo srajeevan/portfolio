@@ -115,6 +115,8 @@ https://www.kaggle.com/datasets/datasnaek/youtube-new
 #### Architecture Diagram
 ![Architecture_Diagram](https://github.com/srajeevan/AWS-Python_ETL_Pipeline_using_Airflow/assets/16627503/45e4047a-2d7b-4134-9b9f-d2ef31dba318)
 
+![Diag](https://github.com/srajeevan/Youtube-Data-Analysis-AWS/blob/main/Assets/architecture_diagram.png)
+
 #### AWS Services used in this project
 - Amazon S3
 - AWS Glue
