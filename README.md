@@ -113,7 +113,8 @@ Here is the link to the dataset
 https://www.kaggle.com/datasets/datasnaek/youtube-new
 
 #### Architecture Diagram
-![Architecture Diagram](Assets/architecture_diagram.png)
+![Diagram](https://github.com/srajeevan/portfolio/blob/main/Assets/architecture_diagram.png)
+
 #### AWS Services used in this project
 - Amazon S3
 - AWS Glue
