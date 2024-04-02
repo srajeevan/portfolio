@@ -122,4 +122,4 @@ https://www.kaggle.com/datasets/datasnaek/youtube-new
 
 #### Architecture Diagram
 
-![Architecture Diagram](https://github.com/srajeevan/Youtube-Data-Analysis-AWS/blob/main/Assets/architecture_diagram.png)
+![Architecture Diagram](https://github.com/srajeevan/portfolio/blob/main/Assets/architecture_diagram.png)
