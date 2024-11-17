@@ -2,7 +2,7 @@
 
 ## Work Experience
 
-**Big Data Analyst @ Insight Global - July 2022 - Present**
+**Data Warehouse Engineer @ Insight Global - July 2022 - Present**
 - Engineered and optimized data processing workflows using Pyspark and Python on the Databricks platform, achieving a 20% reduction in
 runtime and a 15% decrease in resource utilization.
 - Innovated in writing efficient code for data transformation and analysis, handling large volumes of data with Spark, and integrating Java and
