@@ -6,7 +6,7 @@ layout: null
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sreejith Rajeevan — Data Warehouse Engineer</title>
+  <title>Sreejith Rajeevan — Data Engineer</title>
   <style>
     :root {
       --bg: #0f1117;
@@ -34,20 +34,36 @@ layout: null
     /* Navigation */
     nav {
       position: fixed; top: 0; left: 0; right: 0; z-index: 100;
-      background: rgba(15,17,23,0.85);
-      backdrop-filter: blur(12px);
-      border-bottom: 1px solid var(--border);
+      background: rgba(15,17,23,0.7);
+      backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
+      border-bottom: 1px solid rgba(46,49,64,0.5);
       padding: 0 2rem;
+      transition: background 0.3s, box-shadow 0.3s;
+    }
+    nav.scrolled {
+      background: rgba(15,17,23,0.95);
+      box-shadow: 0 4px 30px rgba(0,0,0,0.3);
     }
     nav .nav-inner {
       max-width: 900px; margin: 0 auto;
       display: flex; align-items: center; justify-content: space-between;
-      height: 56px;
+      height: 60px;
     }
-    nav .logo { font-weight: 700; font-size: 1.1rem; }
-    nav .nav-links { display: flex; gap: 1.5rem; }
-    nav .nav-links a { color: var(--text-dim); font-size: 0.9rem; font-weight: 500; transition: color 0.2s; }
-    nav .nav-links a:hover { color: var(--accent); text-decoration: none; }
+    nav .logo {
+      font-weight: 800; font-size: 1.15rem; letter-spacing: -0.5px;
+      background: linear-gradient(135deg, var(--accent), var(--purple));
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+    }
+    nav .nav-links { display: flex; gap: 0.5rem; }
+    nav .nav-links a {
+      color: var(--text-dim); font-size: 0.85rem; font-weight: 500;
+      padding: 0.4rem 0.75rem; border-radius: 8px;
+      transition: color 0.2s, background 0.2s;
+    }
+    nav .nav-links a:hover {
+      color: var(--accent); background: var(--accent-dim); text-decoration: none;
+    }
+    nav .nav-links a.active { color: var(--accent); background: var(--accent-dim); }
 
     /* Hero */
     .hero {
@@ -232,7 +248,7 @@ layout: null
 
 <nav>
   <div class="nav-inner">
-    <div class="logo">SR</div>
+    <div class="logo">Sreejith Rajeevan</div>
     <div class="nav-links">
       <a href="#experience">Experience</a>
       <a href="#skills">Skills</a>
@@ -245,7 +261,7 @@ layout: null
 
 <div class="hero">
   <div class="hero-label">Open to Opportunities</div>
-  <h1>Sreejith Rajeevan<br><span class="gradient">Data Warehouse Engineer</span></h1>
+  <h1>Sreejith Rajeevan<br><span class="gradient">Data Engineer</span></h1>
   <p>9+ years building scalable data platforms, ETL/ELT pipelines, and analytics infrastructure on AWS and Databricks. Turning raw data into trusted, business-ready insights.</p>
   <div class="hero-links">
     <a href="https://www.linkedin.com/in/sreejithrajeevaner/" class="btn-primary" target="_blank">LinkedIn</a>
@@ -508,6 +524,27 @@ layout: null
 
   document.querySelectorAll('.timeline-item, .skill-card, .project-card, .edu-card')
     .forEach(el => observer.observe(el));
+
+  // Navbar scroll effect
+  const nav = document.querySelector('nav');
+  window.addEventListener('scroll', () => {
+    nav.classList.toggle('scrolled', window.scrollY > 20);
+  });
+
+  // Active nav link highlighting
+  const sections = document.querySelectorAll('section[id]');
+  const navLinks = document.querySelectorAll('nav .nav-links a');
+  window.addEventListener('scroll', () => {
+    let current = '';
+    sections.forEach(section => {
+      if (window.scrollY >= section.offsetTop - 100) {
+        current = section.getAttribute('id');
+      }
+    });
+    navLinks.forEach(link => {
+      link.classList.toggle('active', link.getAttribute('href') === '#' + current);
+    });
+  });
 </script>
 
 </body>
