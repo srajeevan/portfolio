@@ -1,23 +1,18 @@
-# Data Engineer
+# Data Warehouse Engineer
 
 ## Work Experience
 
-**Data Engineer @ NBC News - July 2022 - Present**
-- Implemented Medallion Architecture on AWS, transforming raw API and CRM data (JSON, Parquet, CSV) into curated Silver and Gold Delta tables using PySpark in Databricks.
-- Developed scalable ETL pipelines in Databricks to generate Delta tables for Silver and Gold layers, enabling faster reporting and ad hoc analysis in Looker and Domo.
-- Optimized large-scale data transformations with PySpark, reducing ETL runtime by 35% and improving downstream data freshness.
-- Streamlined raw data ingestion to AWS S3 and automated metadata management via AWS Glue crawlers, improving Athena data discoverability by 40%.
-- Maintained and extended Apache Airflow DAGs to orchestrate complex workflows, ensuring SLA compliance and reducing pipeline maintenance by 40%.
-- Orchestrated data workflows in Apache Airflow, improving pipeline reliability and reducing manual interventions by 50%.
-- Built a unified subscription reporting model consolidating metrics across products, enhancing stakeholder visibility into customer behavior and retention trends.
-- Engineered an OLAP subscription data model to replace legacy architecture, cutting query time by 45% and improving reporting accuracy.
-- Designed an eCommerce data model to track affiliate performance, revenue, and commissions, improving ROI tracking accuracy by 30%.
-- Created SQL views and Athena-accessible datasets to support flexible querying and validation of curated data layers for analysts and data scientists.
-- Collaborated with BI teams to integrate curated datasets into Domo and Looker dashboards, reducing report delivery time by 35%.
-- Leveraged Databricks Unity Catalog to centralize data governance, streamline access control, and ensure consistent security and compliance across Silver and Gold layers.
-- Implemented GCP Cloud Run services to support modular ETL/ELT operations with emphasis on reusability.
-- Built and maintained Docker containers for encapsulating custom scripts and services, ensuring consistent deployment across local and cloud platforms.
-- Programmed Cloud Run deployments for data transformation functions, reducing infrastructure overhead and manual intervention.
+**Data Warehouse Engineer @ NBC News - July 2022 - Present**
+- Designed and maintained dbt models powering enterprise reporting, writing custom macros and Jinja-templated SQL for reusable transformation logic across Bronze, Silver, and Gold layers, with all models version-controlled, tested, and queryable via Databricks Unity Catalog.
+- Built scalable Medallion Architecture (Bronze/Silver/Gold) on AWS using PySpark and Delta Lake in Databricks, transforming raw API and CRM data into curated datasets consumed by analytics teams.
+- Configured and deployed Databricks Genie Spaces with curated datasets and semantic layers, enabling self-service analytics for non-technical stakeholders and reducing ad-hoc data request volume.
+- Centralized data governance using Databricks Unity Catalog, streamlining access controls and ensuring consistent security across curated data layers.
+- Built and optimized ETL/ELT pipelines in Databricks, reducing runtime by 35% and enabling faster reporting in Looker and Domo.
+- Applied performance tuning and cost optimization to Spark jobs and SQL transformations, reducing compute cost and improving data freshness.
+- Orchestrated complex data workflows using Apache Airflow and Databricks Workflows, building reliable job pipelines to ensure SLA compliance.
+- Improved data discoverability by 40% by automating ingestion into AWS S3 and implementing AWS Glue crawlers.
+- Designed and deployed Dockerized data services using GCP Cloud Run, enhancing modularity and reducing infrastructure overhead.
+- Integrated AI coding assistants and agents into data engineering workflows, building custom agents with Model Context Protocol (MCP) integrations to accelerate development and enable self-service data tooling.
 
 **BI Data Engineer @ Blue Cross Blue Shield of Alabama - March 2020 - July 2022**
 - Automated ETL processes using Python and Apache Airflow on AWS EC2, reducing manual intervention and improving processing speed by 40%.
@@ -48,17 +43,18 @@ Lamar University • US, TX, Beaumont • 2016
 
 ## Skills
 
-- Data Engineering : Analyze, Organize data, build data systems, data analysis, interpret trends and patterns, improving data quality, working
-with nested data unstructured data.
-- Database Management : SQL,PL SQL
-- ETL Technologies : Airflow
-- Data Modeling : Star Schema, Snowflake, ER Diagrams, UML Class Diagrams
-- Distributed Computing : Spark, Pyspark in Databricks
-- Cloud Computing : AWS services like S3, EC2, Athena, Redshift, Azure
-- Programming Languages : Python, Pyspark, Javascript
-- Containerization : Knowledge in Docker.
-- Version Control : Git and GitHub
-- Analytical Skills : Analytical and problem-solving skills, Looker, TIBCO Webfocus
+- Data Engineering : Data pipelines, ETL/ELT, data quality, data modeling, working with nested and unstructured data
+- Database Management : SQL, PostgreSQL, MS SQL Server
+- Transformation & Orchestration : dbt, Apache Airflow, Databricks Workflows
+- Data Modeling : Medallion Architecture, Star Schema, ER Diagrams
+- Distributed Computing : Spark, PySpark, Spark SQL in Databricks
+- Cloud Computing : AWS S3, AWS Glue, AWS Athena, AWS Lambda, GCP Cloud Run
+- Data Platforms : Databricks, Delta Lake, Unity Catalog, Genie Spaces
+- Programming Languages : Python, PySpark, SQL
+- Containerization : Docker
+- Version Control : Git, GitHub, GitHub Actions
+- BI & Analytics : Looker, Domo, Amazon QuickSight
+- AI Tooling : AI Coding Agents, Model Context Protocol (MCP)
 
 ## Projects
 
