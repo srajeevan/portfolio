@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sreejith Rajeevan — Data Warehouse Engineer</title>
+  <style>
+    :root {
+      --bg: #0f1117;
+      --surface: #1a1d27;
+      --card: #222533;
+      --accent: #4f8ff7;
+      --accent-dim: rgba(79,143,247,0.12);
+      --text: #e2e4ea;
+      --text-dim: #9498a6;
+      --border: #2e3140;
+      --green: #34d399;
+      --purple: #a78bfa;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    /* Navigation */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      background: rgba(15,17,23,0.85);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+      padding: 0 2rem;
+    }
+    nav .nav-inner {
+      max-width: 900px; margin: 0 auto;
+      display: flex; align-items: center; justify-content: space-between;
+      height: 56px;
+    }
+    nav .logo { font-weight: 700; font-size: 1.1rem; }
+    nav .nav-links { display: flex; gap: 1.5rem; }
+    nav .nav-links a { color: var(--text-dim); font-size: 0.9rem; font-weight: 500; transition: color 0.2s; }
+    nav .nav-links a:hover { color: var(--accent); text-decoration: none; }
+
+    /* Hero */
+    .hero {
+      max-width: 900px; margin: 0 auto;
+      padding: 8rem 2rem 4rem;
+    }
+    .hero-label {
+      display: inline-block;
+      background: var(--accent-dim); color: var(--accent);
+      padding: 0.3rem 0.8rem; border-radius: 20px;
+      font-size: 0.8rem; font-weight: 600;
+      margin-bottom: 1.2rem;
+      letter-spacing: 0.5px;
+    }
+    .hero h1 {
+      font-size: 2.8rem; font-weight: 800;
+      line-height: 1.15; margin-bottom: 1rem;
+    }
+    .hero h1 .gradient {
+      background: linear-gradient(135deg, var(--accent), var(--purple));
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+    }
+    .hero p {
+      font-size: 1.15rem; color: var(--text-dim);
+      max-width: 600px; margin-bottom: 2rem;
+    }
+    .hero-links { display: flex; gap: 1rem; flex-wrap: wrap; }
+    .hero-links a {
+      display: inline-flex; align-items: center; gap: 0.4rem;
+      padding: 0.55rem 1.2rem; border-radius: 8px;
+      font-size: 0.9rem; font-weight: 500; transition: all 0.2s;
+    }
+    .btn-primary { background: var(--accent); color: #fff; }
+    .btn-primary:hover { background: #3a7ae0; text-decoration: none; }
+    .btn-outline { border: 1px solid var(--border); color: var(--text-dim); }
+    .btn-outline:hover { border-color: var(--accent); color: var(--accent); text-decoration: none; }
+
+    /* Sections */
+    section {
+      max-width: 900px; margin: 0 auto;
+      padding: 4rem 2rem;
+    }
+    .section-title {
+      font-size: 1.6rem; font-weight: 700;
+      margin-bottom: 0.5rem;
+    }
+    .section-subtitle {
+      color: var(--text-dim); font-size: 0.95rem;
+      margin-bottom: 2.5rem;
+    }
+
+    /* Timeline */
+    .timeline { position: relative; padding-left: 2rem; }
+    .timeline::before {
+      content: ''; position: absolute; left: 6px; top: 8px; bottom: 8px;
+      width: 2px; background: var(--border);
+    }
+    .timeline-item {
+      position: relative; margin-bottom: 2.5rem;
+      opacity: 0; transform: translateY(20px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+    .timeline-item.visible { opacity: 1; transform: translateY(0); }
+    .timeline-item::before {
+      content: ''; position: absolute;
+      left: -2rem; top: 8px;
+      width: 12px; height: 12px;
+      background: var(--accent); border-radius: 50%;
+      border: 3px solid var(--bg);
+    }
+    .timeline-item .role {
+      font-size: 1.15rem; font-weight: 700; margin-bottom: 0.15rem;
+    }
+    .timeline-item .company {
+      color: var(--accent); font-weight: 600; font-size: 0.95rem;
+    }
+    .timeline-item .period {
+      color: var(--text-dim); font-size: 0.85rem; margin-bottom: 0.8rem;
+    }
+    .timeline-item ul {
+      list-style: none; padding: 0;
+    }
+    .timeline-item li {
+      position: relative; padding-left: 1.2rem;
+      color: var(--text-dim); font-size: 0.9rem;
+      margin-bottom: 0.5rem; line-height: 1.5;
+    }
+    .timeline-item li::before {
+      content: ''; position: absolute; left: 0; top: 8px;
+      width: 5px; height: 5px; border-radius: 50%;
+      background: var(--border);
+    }
+
+    /* Skills */
+    .skills-grid {
+      display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 1rem;
+    }
+    .skill-card {
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: 12px; padding: 1.2rem;
+      opacity: 0; transform: translateY(20px);
+      transition: opacity 0.5s ease, transform 0.5s ease, border-color 0.2s;
+    }
+    .skill-card.visible { opacity: 1; transform: translateY(0); }
+    .skill-card:hover { border-color: var(--accent); }
+    .skill-card h3 {
+      font-size: 0.85rem; font-weight: 600;
+      color: var(--accent); margin-bottom: 0.7rem;
+      text-transform: uppercase; letter-spacing: 0.5px;
+    }
+    .skill-tags { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+    .skill-tag {
+      background: var(--accent-dim); color: var(--text);
+      padding: 0.25rem 0.6rem; border-radius: 6px;
+      font-size: 0.8rem; font-weight: 500;
+    }
+
+    /* Projects */
+    .project-grid {
+      display: grid; grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+      gap: 1.5rem;
+    }
+    .project-card {
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: 12px; padding: 1.5rem;
+      opacity: 0; transform: translateY(20px);
+      transition: opacity 0.5s ease, transform 0.5s ease, border-color 0.2s;
+    }
+    .project-card.visible { opacity: 1; transform: translateY(0); }
+    .project-card:hover { border-color: var(--accent); }
+    .project-card h3 { font-size: 1.05rem; font-weight: 700; margin-bottom: 0.5rem; }
+    .project-card p { color: var(--text-dim); font-size: 0.9rem; margin-bottom: 1rem; }
+    .project-card .tech-list { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-bottom: 1rem; }
+    .project-card .tech-tag {
+      background: rgba(52,211,153,0.1); color: var(--green);
+      padding: 0.2rem 0.5rem; border-radius: 5px; font-size: 0.75rem; font-weight: 500;
+    }
+    .project-card img {
+      width: 100%; border-radius: 8px;
+      border: 1px solid var(--border);
+    }
+
+    /* Education */
+    .edu-card {
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: 12px; padding: 1.5rem;
+      display: inline-block;
+      opacity: 0; transform: translateY(20px);
+      transition: opacity 0.5s ease, transform 0.5s ease;
+    }
+    .edu-card.visible { opacity: 1; transform: translateY(0); }
+    .edu-card h3 { font-size: 1.1rem; font-weight: 700; margin-bottom: 0.2rem; }
+    .edu-card .school { color: var(--accent); font-weight: 600; font-size: 0.95rem; }
+    .edu-card .meta { color: var(--text-dim); font-size: 0.85rem; }
+
+    /* Footer */
+    footer {
+      max-width: 900px; margin: 0 auto;
+      padding: 2rem; border-top: 1px solid var(--border);
+      text-align: center; color: var(--text-dim); font-size: 0.85rem;
+    }
+
+    /* Responsive */
+    @media (max-width: 640px) {
+      .hero h1 { font-size: 2rem; }
+      .project-grid { grid-template-columns: 1fr; }
+      nav .nav-links { gap: 1rem; }
+    }
+
+    /* Stagger delays */
+    .delay-1 { transition-delay: 0.1s; }
+    .delay-2 { transition-delay: 0.2s; }
+    .delay-3 { transition-delay: 0.3s; }
+    .delay-4 { transition-delay: 0.4s; }
+    .delay-5 { transition-delay: 0.5s; }
+  </style>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <div class="logo">SR</div>
+    <div class="nav-links">
+      <a href="#experience">Experience</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#education">Education</a>
+    </div>
+  </div>
+</nav>
+
+<div class="hero">
+  <div class="hero-label">Open to Opportunities</div>
+  <h1>Sreejith Rajeevan<br><span class="gradient">Data Warehouse Engineer</span></h1>
+  <p>9+ years building scalable data platforms, ETL/ELT pipelines, and analytics infrastructure on AWS and Databricks. Turning raw data into trusted, business-ready insights.</p>
+  <div class="hero-links">
+    <a href="https://www.linkedin.com/in/sreejithrajeevaner/" class="btn-primary" target="_blank">LinkedIn</a>
+    <a href="https://github.com/srajeevan" class="btn-outline" target="_blank">GitHub</a>
+    <a href="mailto:srajeevaner@gmail.com" class="btn-outline">srajeevaner@gmail.com</a>
+  </div>
+</div>
+
+<section id="experience">
+  <h2 class="section-title">Work Experience</h2>
+  <p class="section-subtitle">Building data platforms that power enterprise analytics</p>
+
+  <div class="timeline">
+    <div class="timeline-item">
+      <div class="role">Data Warehouse Engineer</div>
+      <div class="company">NBC News</div>
+      <div class="period">July 2022 — Present</div>
+      <ul>
+        <li>Designed and maintained dbt models powering enterprise reporting, writing custom macros and Jinja-templated SQL for reusable transformation logic across Bronze, Silver, and Gold layers, with all models version-controlled, tested, and queryable via Databricks Unity Catalog</li>
+        <li>Built scalable Medallion Architecture (Bronze/Silver/Gold) on AWS using PySpark and Delta Lake in Databricks, transforming raw API and CRM data into curated datasets consumed by analytics teams</li>
+        <li>Configured and deployed Databricks Genie Spaces with curated datasets and semantic layers, enabling self-service analytics for non-technical stakeholders</li>
+        <li>Centralized data governance using Databricks Unity Catalog, streamlining access controls and ensuring consistent security across curated data layers</li>
+        <li>Built and optimized ETL/ELT pipelines in Databricks, reducing runtime by 35% and enabling faster reporting in Looker and Domo</li>
+        <li>Applied performance tuning and cost optimization to Spark jobs and SQL transformations, reducing compute cost and improving data freshness</li>
+        <li>Orchestrated complex data workflows using Apache Airflow and Databricks Workflows, building reliable job pipelines to ensure SLA compliance</li>
+        <li>Improved data discoverability by 40% by automating ingestion into AWS S3 and implementing AWS Glue crawlers</li>
+        <li>Designed and deployed Dockerized data services using GCP Cloud Run, enhancing modularity and reducing infrastructure overhead</li>
+        <li>Integrated AI coding assistants and agents into data engineering workflows, building custom agents with Model Context Protocol (MCP) integrations to accelerate development</li>
+      </ul>
+    </div>
+
+    <div class="timeline-item">
+      <div class="role">BI Data Engineer</div>
+      <div class="company">Blue Cross Blue Shield of Alabama</div>
+      <div class="period">March 2020 — July 2022</div>
+      <ul>
+        <li>Automated ETL processes using Python and Apache Airflow on AWS EC2, reducing manual intervention and improving processing speed by 40%</li>
+        <li>Processed JSON data with Python, extracting key fields to enhance data cleansing and transformation</li>
+        <li>Utilized AWS Glue for reliable, high-performance ETL operations, ensuring pipeline integrity</li>
+        <li>Configured Amazon QuickSight for analytics, designing visualizations including charts and drill-down reports</li>
+        <li>Designed and developed interactive dashboards in Looker and Domo, improving data accessibility and decision-making</li>
+        <li>Created and monitored AWS Glue jobs to maintain data quality and optimize performance</li>
+      </ul>
+    </div>
+
+    <div class="timeline-item">
+      <div class="role">SQL DBA / BI Developer</div>
+      <div class="company">Amtex Systems Inc</div>
+      <div class="period">March 2017 — February 2020</div>
+      <ul>
+        <li>Enhanced MS SQL Server performance by optimizing query response times and transaction processing speed, improving efficiency by 50%</li>
+        <li>Implemented Transactional Replication and disaster recovery strategies for high availability</li>
+        <li>Designed and engineered databases, tables, and stored procedures to support enterprise applications</li>
+        <li>Conducted SQL query analysis and optimization, improving data quality and processing efficiency</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="skills">
+  <h2 class="section-title">Technical Skills</h2>
+  <p class="section-subtitle">Core technologies I work with daily</p>
+
+  <div class="skills-grid">
+    <div class="skill-card delay-1">
+      <h3>Data Platforms</h3>
+      <div class="skill-tags">
+        <span class="skill-tag">Databricks</span>
+        <span class="skill-tag">Delta Lake</span>
+        <span class="skill-tag">Unity Catalog</span>
+        <span class="skill-tag">Genie Spaces</span>
+      </div>
+    </div>
+    <div class="skill-card delay-2">
+      <h3>Cloud Computing</h3>
+      <div class="skill-tags">
+        <span class="skill-tag">AWS S3</span>
+        <span class="skill-tag">AWS Glue</span>
+        <span class="skill-tag">AWS Athena</span>
+        <span class="skill-tag">AWS Lambda</span>
+        <span class="skill-tag">GCP Cloud Run</span>
+      </div>
+    </div>
+    <div class="skill-card delay-3">
+      <h3>Programming</h3>
+      <div class="skill-tags">
+        <span class="skill-tag">Python</span>
+        <span class="skill-tag">PySpark</span>
+        <span class="skill-tag">SQL</span>
+        <span class="skill-tag">Spark SQL</span>
+      </div>
+    </div>
+    <div class="skill-card delay-1">
+      <h3>Transformation & Orchestration</h3>
+      <div class="skill-tags">
+        <span class="skill-tag">dbt</span>
+        <span class="skill-tag">Apache Airflow</span>
+        <span class="skill-tag">Databricks Workflows</span>
+        <span class="skill-tag">Medallion Architecture</span>
+      </div>
+    </div>
+    <div class="skill-card delay-2">
+      <h3>BI & Analytics</h3>
+      <div class="skill-tags">
+        <span class="skill-tag">Looker</span>
+        <span class="skill-tag">Domo</span>
+        <span class="skill-tag">Amazon QuickSight</span>
+      </div>
+    </div>
+    <div class="skill-card delay-3">
+      <h3>DevOps & AI Tooling</h3>
+      <div class="skill-tags">
+        <span class="skill-tag">Docker</span>
+        <span class="skill-tag">Git</span>
+        <span class="skill-tag">GitHub Actions</span>
+        <span class="skill-tag">AI Agents</span>
+        <span class="skill-tag">MCP</span>
+      </div>
+    </div>
+    <div class="skill-card delay-1">
+      <h3>Databases</h3>
+      <div class="skill-tags">
+        <span class="skill-tag">PostgreSQL</span>
+        <span class="skill-tag">MS SQL Server</span>
+        <span class="skill-tag">Data Modeling</span>
+        <span class="skill-tag">Star Schema</span>
+      </div>
+    </div>
+    <div class="skill-card delay-2">
+      <h3>Familiarity / Exposure</h3>
+      <div class="skill-tags">
+        <span class="skill-tag" style="background:rgba(167,139,250,0.12);color:var(--purple)">Redshift</span>
+        <span class="skill-tag" style="background:rgba(167,139,250,0.12);color:var(--purple)">Azure</span>
+        <span class="skill-tag" style="background:rgba(167,139,250,0.12);color:var(--purple)">Terraform</span>
+        <span class="skill-tag" style="background:rgba(167,139,250,0.12);color:var(--purple)">Kubernetes</span>
+        <span class="skill-tag" style="background:rgba(167,139,250,0.12);color:var(--purple)">Snowflake</span>
+      </div>
+    </div>
+    <div class="skill-card delay-3">
+      <h3>AI & ML Exploration</h3>
+      <div class="skill-tags">
+        <span class="skill-tag">LLMs (GPT, Claude)</span>
+        <span class="skill-tag">Prompt Engineering</span>
+        <span class="skill-tag">AI Agents</span>
+        <span class="skill-tag">Model Context Protocol</span>
+        <span class="skill-tag">RAG Pipelines</span>
+        <span class="skill-tag">LangChain</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="projects">
+  <h2 class="section-title">Projects</h2>
+  <p class="section-subtitle">Hands-on data engineering work</p>
+
+  <div class="project-grid">
+    <div class="project-card">
+      <h3>Polymarket AI Trading Pipeline</h3>
+      <p>Event-driven AI pipeline that monitors breaking news in real time, classifies market impact with Claude, and trades niche Polymarket prediction markets automatically.</p>
+      <div class="tech-list">
+        <span class="tech-tag">Python</span>
+        <span class="tech-tag">Claude API</span>
+        <span class="tech-tag">AI Agents</span>
+        <span class="tech-tag">Event-Driven</span>
+        <span class="tech-tag">Prediction Markets</span>
+      </div>
+    </div>
+
+    <div class="project-card">
+      <h3>LaunchPad — AI Marketing Tool</h3>
+      <p>AI-powered social media marketing tool for X and TikTok. Generates content, schedules posts, and analyzes engagement using LLMs.</p>
+      <div class="tech-list">
+        <span class="tech-tag">AI/LLMs</span>
+        <span class="tech-tag">Python</span>
+        <span class="tech-tag">Social Media APIs</span>
+        <span class="tech-tag">Content Generation</span>
+      </div>
+    </div>
+
+    <div class="project-card">
+      <h3>Career Ops — AI Job Search System</h3>
+      <p>AI-powered job search system built on Claude Code with 14 skill modes, Go dashboard, PDF generation, and batch processing for automated resume tailoring.</p>
+      <div class="tech-list">
+        <span class="tech-tag">Claude Code</span>
+        <span class="tech-tag">Go</span>
+        <span class="tech-tag">AI Agents</span>
+        <span class="tech-tag">MCP</span>
+        <span class="tech-tag">PDF Generation</span>
+      </div>
+    </div>
+
+    <div class="project-card">
+      <h3>Capitol Gains — Congress Stock Tracker</h3>
+      <p>Native SwiftUI iOS app tracking congressional stock trades with a Convex backend. Includes a marketing website and data pipeline for trade monitoring.</p>
+      <div class="tech-list">
+        <span class="tech-tag">SwiftUI</span>
+        <span class="tech-tag">Convex</span>
+        <span class="tech-tag">iOS</span>
+        <span class="tech-tag">Data Pipeline</span>
+      </div>
+    </div>
+
+    <div class="project-card">
+      <h3>SFX Audio Generator — Claude Code Plugin</h3>
+      <p>Claude Code plugin that generates perfectly timed sound effect audio tracks for videos using Whisper transcription and contextual sound mapping.</p>
+      <div class="tech-list">
+        <span class="tech-tag">Claude Code</span>
+        <span class="tech-tag">Whisper</span>
+        <span class="tech-tag">Audio Processing</span>
+        <span class="tech-tag">AI</span>
+      </div>
+    </div>
+
+    <div class="project-card">
+      <h3>AWS ETL Pipeline with Airflow</h3>
+      <p>End-to-end ETL pipeline written in Python, scheduled and orchestrated using Apache Airflow on an AWS EC2 instance.</p>
+      <div class="tech-list">
+        <span class="tech-tag">AWS EC2</span>
+        <span class="tech-tag">AWS S3</span>
+        <span class="tech-tag">Apache Airflow</span>
+        <span class="tech-tag">Python</span>
+      </div>
+      <img src="https://github.com/srajeevan/AWS-Python_ETL_Pipeline_using_Airflow/assets/16627503/45e4047a-2d7b-4134-9b9f-d2ef31dba318" alt="ETL Pipeline Architecture">
+    </div>
+
+    <div class="project-card">
+      <h3>YouTube Data Analysis on AWS</h3>
+      <p>Analytics pipeline processing structured and semi-structured YouTube trending data. Ingests Kaggle datasets, transforms with Glue, and visualizes in QuickSight.</p>
+      <div class="tech-list">
+        <span class="tech-tag">AWS S3</span>
+        <span class="tech-tag">AWS Glue</span>
+        <span class="tech-tag">AWS Lambda</span>
+        <span class="tech-tag">AWS Athena</span>
+        <span class="tech-tag">QuickSight</span>
+      </div>
+      <img src="https://raw.githubusercontent.com/srajeevan/Youtube-Data-Analysis-AWS/main/Assets/architecture_diagram.png" alt="YouTube Analysis Architecture">
+    </div>
+  </div>
+</section>
+
+<section id="education">
+  <h2 class="section-title">Education</h2>
+  <p class="section-subtitle"></p>
+
+  <div class="edu-card">
+    <h3>Master of Science in Computer Science</h3>
+    <div class="school">Lamar University</div>
+    <div class="meta">Beaumont, TX — 2016</div>
+  </div>
+</section>
+
+<footer>
+  <p>Sreejith Rajeevan — srajeevaner@gmail.com — 409-225-3848 — Missouri City, TX</p>
+</footer>
+
+<script>
+  // Scroll-triggered fade-in animations
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+
+  document.querySelectorAll('.timeline-item, .skill-card, .project-card, .edu-card')
+    .forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>
